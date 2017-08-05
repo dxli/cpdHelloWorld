@@ -1,4 +1,4 @@
-#include "app/QCpdWindow.h"
+#include "app/QCPDialog.h"
 #include <QApplication>
 #include <QPrinter>
 #include <QPainter>
@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     QString text{"Hello World!"};
     QPrinter printer;
 
-    auto dialog = std::make_unique<QCpdWindow>(&printer);
+    auto dialog = std::make_unique<QCPDialog>(&printer);
     dialog->setWindowTitle("Print Document");
 
     if (dialog->exec() != QDialog::Accepted)
